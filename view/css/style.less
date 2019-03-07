@@ -1,0 +1,61 @@
+body {
+    color: #eee;
+    background-color: #202020;
+    font-family: 'Calibri', serif;
+}
+
+a {
+    font-weight: 400;
+    color: #922;
+    text-decoration: none;
+    &:hover {
+        color: #eee;
+    }
+}
+
+table {
+    border-collapse: collapse;
+    th {
+        vertical-align: bottom;
+        min-width: 80px;
+        text-align: left;
+    }
+
+    th, td {
+        border: 1px solid #333;
+        padding: 5px 10px;
+        //transition: background ease-in .2s;
+    }
+
+    tr.update td {
+        background-color: #303030;
+        //transition: none;
+    }
+
+    td[class] {
+        color: #aaa;
+        &.bid, &.bid_size {
+            color: desaturate(lighten(green, 25%), 80%);
+            text-align: right;
+        }
+        &.ask, &.ask_size {
+            color: desaturate(lighten(red, 15%), 60%);
+        }
+    }
+
+    tr:hover {
+        td, th {
+            background-color: #ccc;
+            color: #333 !important;
+            transition: none;
+        }
+    }
+}
+
+select {
+    padding: 7px;
+    background: #000;
+    color: #fff;
+    border: none;
+
+}
